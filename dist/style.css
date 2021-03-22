@@ -12,7 +12,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
 }
 
 .buttons-container {
@@ -34,9 +34,15 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.buttons:focus {
+    outline: none;
+}
+
 .headline {
     grid-column: 2/3;
     grid-row: 2/3;
+    justify-self: center;
+    align-self: center;
     font-size: 10rem;
     color: rgb(230, 162, 36);
     font-family: 'La Belle Aurore', cursive;
@@ -51,3 +57,21 @@ body {
     font-family: 'Nanum Gothic', cursive;
 }
 
+.menu-container {
+    grid-column: 2/3;
+    font-size: 3rem;
+    color: white;
+    width: 105rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menus {
+    font-family: 'Nanum Gothic', cursive;
+    font-size: 1.5rem;
+    margin: 4rem 0rem;
+}
+
+.menu-descs {
+    font-family: 'Nanum Gothic', cursive;
+    
+}

@@ -1,32 +1,39 @@
 import createMainPage from './createMainPage';
+import createMenuPage from './menu';
+import createContactPage from './contact';
 
 const populatePage = (() => {
     const content = document.querySelector('#content');
-    const tabButtons = document.createElement('div');
-    const homeButton = document.createElement('button');
-    const menuButton = document.createElement('button');
-    const contactButton = document.createElement('button');
     
-    content.appendChild(tabButtons);
-    tabButtons.appendChild(homeButton);
-    tabButtons.appendChild(menuButton);
-    tabButtons.appendChild(contactButton);
-    
-    tabButtons.classList.add('buttons-container');
-    homeButton.classList.add('buttons');
-    menuButton.classList.add('buttons');
-    contactButton.classList.add('buttons');
-    
-    homeButton.textContent = 'HOME';
-    menuButton.textContent = 'MENU';
-    contactButton.textContent = 'CONTACT';
+    const resetElement = (element) => {
+        element.textContent = '';
+    }
 
+    const createButtons = (container, text) => {
+        const button = document.createElement('button');
+        container.appendChild(button);
+        button.classList.add('buttons');
+        button.textContent = text;
+        return button;
+    }
+
+    const tabButtons = document.createElement('div');
+    content.appendChild(tabButtons);
+    tabButtons.classList.add('buttons-container');
+    const homeButton = createButtons(tabButtons, 'HOME');
+    const menuButton = createButtons(tabButtons, 'MENU');
+    const contactButton = createButtons(tabButtons, 'CONTACT');
+    
     homeButton.addEventListener('click', () => {
         console.log('home');
+        resetElement(content);
+        return createMainPage();
     })
 
     menuButton.addEventListener('click', () => {
         console.log('menu');
+        resetElement(content);
+        return createMenuPage();
     })
 
     contactButton.addEventListener('click', () => {
@@ -35,5 +42,6 @@ const populatePage = (() => {
 
 })();
 
-
 createMainPage();
+
+
