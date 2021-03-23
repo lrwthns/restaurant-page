@@ -1,5 +1,6 @@
+import { dynamicDisplay } from './index';
+
 export default function createMenuPage () {
-    const content = document.querySelector('#content');
     const menu = document.createElement('div');
 
     const createMenu = (name, desc, container) => {
@@ -18,7 +19,7 @@ export default function createMenuPage () {
 
     menu.classList.add('menu-container');
 
-    content.appendChild(menu);
+    dynamicDisplay.appendChild(menu);
   
     const menuOne = createMenu('Dendeng Balado', 'Sumatran spicy beef jerky', menu);
     const menuTwo = createMenu('Pempek Panggang', 'Grilled fishcake with ebi filling', menu);
