@@ -9,7 +9,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 6fr;
@@ -36,10 +36,11 @@ body {
     font-size: 1.2rem;
     color: rgb(199, 129, 0);
     background-color: transparent;
+    padding: 0.5rem;
 }
 
 .buttons:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(235, 161, 51);
 }
 
 .buttons:focus {
@@ -48,36 +49,97 @@ body {
 
 .headline {
     grid-column: 2/3;
+    margin: 10rem;
     justify-self: center;
-    align-self: center;
+    text-align: center;
     font-size: 10rem;
     color: rgb(230, 162, 36);
     font-family: 'La Belle Aurore', cursive;
 }
 
+.headline:hover {
+    color: rgb(255, 173, 22);
+}
+
 .main-words {
-    margin: -7rem 0rem;
+    margin: -25rem 10rem;
     grid-column: 2/3;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: rgb(158, 122, 80);
     font-family: 'Nanum Gothic', cursive;
 }
 
 .menu-container {
     grid-column: 2/3;
-    font-size: 3rem;
-    color: white;
     width: 105rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    height: 40rem;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .menus {
-    font-family: 'Nanum Gothic', cursive;
-    font-size: 1.5rem;
-    margin: 4rem 0rem;
+    grid-column: 2/3;
+    justify-self: center;
+    text-align: center;
+    color: rgb(235, 161, 51);
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 3rem;
 }
 
 .menu-descs {
     font-family: 'Nanum Gothic', cursive;
-    
+    font-size: 1.5rem;
+    color: rgb(158, 122, 80);
+}
+
+#contact {
+    grid-column: 2/3;
+    width: 105rem;
+    height: 40rem;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3.5fr 3.5fr 1fr 1fr 1fr;
+}
+
+#address, #phone, #email, #operation-hours, #endInfo {
+    grid-column: 2/3;
+    justify-self: center;
+    font-family: 'Nanum Gothic', cursive;
+    color: rgb(235, 161, 51);
+    text-align: center;
+}
+
+#address {
+    grid-row: 1/2;
+    align-self: center;
+    line-height: 1.5;
+    font-size: 2.6rem;
+}
+
+#operation-hours {
+    grid-row: 2/3;
+    font-size: 1.57em;
+    align-self: center;
+    line-height: 1.5;
+    padding: 0.8rem;
+    border: 0.2rem solid rgb(235, 161, 51);
+}
+
+#phone {
+    grid-row: 3/4;
+    font-size: 1.5rem;
+    align-self: end;
+}
+
+#email {
+    margin: 0.5rem;
+    grid-row: 4/5;
+    font-size: 1.5rem;
+}
+
+#end-info {
+    grid-row: 5/6;
+    font-size: 1.5rem;
 }

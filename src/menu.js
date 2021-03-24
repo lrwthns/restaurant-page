@@ -2,11 +2,10 @@ import { dynamicDisplay } from './index';
 
 export default function createMenuPage () {
     const menu = document.createElement('div');
-
     const createMenu = (name, desc, container) => {
         const menuElement = document.createElement('div');
-        const menuName = document.createElement('h1');
-        const menuDesc = document.createElement('h4');
+        const menuName = document.createElement('div');
+        const menuDesc = document.createElement('div');
         menuElement.classList.add('menus');
         menuDesc.classList.add('menu-descs');
         menuName.textContent = name;
@@ -16,14 +15,9 @@ export default function createMenuPage () {
         menuElement.appendChild(menuDesc);
         return menuElement;
     }
-
     menu.classList.add('menu-container');
-
     dynamicDisplay.appendChild(menu);
-  
-    const menuOne = createMenu('Dendeng Balado', 'Sumatran spicy beef jerky', menu);
-    const menuTwo = createMenu('Pempek Panggang', 'Grilled fishcake with ebi filling', menu);
-    const menuThree = createMenu('Kolak Pisang', 'Banana and coconut milk dessert', menu);
-
-
+    const menuOne = createMenu('Dendeng Balado', 'Sumatran spicy beef jerky - 500g - 25$', menu);
+    const menuTwo = createMenu('Pempek Panggang', 'Grilled fishcakes with shrimp paste filling - 20$', menu);
+    const menuThree = createMenu('Kolak Pisang', 'Banana and coconut milk dessert - 13$', menu);
 }
